@@ -1,6 +1,6 @@
 [build]
   base = "."
-  command = "corepack enable && corepack prepare pnpm@10.26.1 --activate && pnpm install && pnpm run typecheck:libs && pnpm --filter @workspace/calculator run build"
+  command = "npm install -g pnpm@10 && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/calculator run build"
   publish = "artifacts/calculator/dist/public"
 
 [build.environment]
